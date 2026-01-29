@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - SecureAuth</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-brand">SecureAuth - Admin Panel</div>
+            <div class="nav-links">
+                <a href="/logout" class="btn btn-outline">Logout</a>
+            </div>
+        </nav>
+
+        <div class="dashboard-card admin-panel">
+            <h2>🔐 Administrator Dashboard</h2>
+
+            <div class="info-section">
+                <div class="info-item">
+                    <span class="label">Username:</span>
+                    <span class="value">
+                        <%= username %>
+                    </span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Access Level:</span>
+                    <span class="value role-badge role-admin">Administrator</span>
+                </div>
+            </div>
+
+            <div class="flag-container">
+                <h3>🚩 CTF Flag</h3>
+                <div class="flag-value">
+                    <%= flag %>
+                </div>
+                <p class="flag-hint">Congratulations! You've successfully exploited the vulnerability.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

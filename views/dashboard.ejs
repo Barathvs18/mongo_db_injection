@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SecureAuth</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-brand">SecureAuth</div>
+            <div class="nav-links">
+                <a href="/logout" class="btn btn-outline">Logout</a>
+            </div>
+        </nav>
+
+        <div class="dashboard-card">
+            <h2>User Dashboard</h2>
+
+            <div class="info-section">
+                <div class="info-item">
+                    <span class="label">Username:</span>
+                    <span class="value">
+                        <%= username %>
+                    </span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Role:</span>
+                    <span class="value role-badge role-<%= role %>">
+                        <%= role %>
+                    </span>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                Welcome to your dashboard. You are logged in as a regular user.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
