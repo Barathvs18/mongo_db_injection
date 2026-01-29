@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3020:3020"
+    environment:
+      - PORT=3020
+      - MONGO_URI=mongodb://db:27017/nosql_injection_db
+      - JWT_SECRET=supersecretjwtkey123
+      - FLAG=CTF{advanced_nosql_injection_admin_bypass}
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    restart: always
+
+volumes:
+  mongodb_data:
